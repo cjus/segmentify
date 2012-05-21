@@ -1,0 +1,4 @@
+segmentify
+==========
+
+Segmentify jQuery Plugin
