@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>-jQuery Segmentify Demo</title>
+        <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+        <script type='text/javascript' src='jquery.segmentify.js'></script>
+        <style type='text/css'>
+            .checkifystyle {
+                float: left;
+                margin: 0 4px 0 0;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+                $('#menusegments').segmentify({
+                    selecteditemindex: 0,
+                    width: '600px',
+                    ///*
+                    shadestart: '#515151',
+                    shadeend: '#2A2A2A',
+                    color: '#EEEEEE',
+                    fontsize: '14px',
+                    fontweight: 'normal',
+                    sepcolor: '#2A2A2A',
+                    //*/
+                    items: [{
+                        text: 'Facebook'
+                    }, {
+                        text: 'Twitter'
+                    }, {
+                        text: 'Pinterest'
+                    }, {
+                        text: 'SMS'
+                    }, {
+                        text: 'Email'
+                    }],
+                    onSelect: function(i) {
+                        alert('item ' + i + ' selected');
+                    }
+                });
+            });
+        </script>
+    </head>
+    
+    <body>
+        <div id="menusegments"></div>
+    </body>
+
+</html>
