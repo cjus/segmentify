@@ -1,5 +1,5 @@
 /*!
- * jQuery Segmentify plugin -- version 0.51
+ * jQuery Segmentify plugin -- version 0.60
  * Creates a segment button control
  * @author  Carlos Justiniano (carlos.justiniano@gmail.com)
  * @contributions:
@@ -26,6 +26,9 @@
          onSelect:null          /* default callback function when segment is selected */
       };
       var options = $.extend(defaults, options);
+
+      // allow segmentify to update in place
+      $(this).empty();
 
       return this.each(function (i) {
          var that = this;
@@ -104,7 +107,6 @@
                   if ($(that.items[j]).text() === txt) {
                      if (options.onSelect != undefined) {
                         options.onSelect(j);
-                        return;
                      }
                   }
                });
